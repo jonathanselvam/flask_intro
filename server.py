@@ -10,7 +10,7 @@ def show():
     return '<h1>Yo</h1>'
 
 @app.route('/user/<username>')
-def show(username):
+def profile(username):
     return f"Hi {username}"
 
 if __name__ == '__main__':
