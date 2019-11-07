@@ -3,7 +3,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html') # by default looks for index.html inside a templates folder in the same directory as this script.
+    signed_in = True # we are hardcoding this just to demonstrate how we can do conditionals in our template files, in future we won't be hardcoding this.
+    return render_template('index.html', signed_in=signed_in)
 
 @app.route("/another")
 def show():
