@@ -5,5 +5,9 @@ app = Flask(__name__)
 def index():
     return '<h1>Why so easy</h1>'
 
+@app.route('/user/<username>')
+def show(username):
+    return f"Hi {username}"
+
 if __name__ == '__main__': # Revisit previous challenge if you're uncertain what this does https://code.nextacademy.com/lessons/name-main/424
    app.run()
